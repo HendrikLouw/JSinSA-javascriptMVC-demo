@@ -24,8 +24,7 @@ var getUserTweets = function (options) {
 }
 
 var showCurrentUserTweets = function (data) {
-    
-    console.log(data)
+
     if ( !$('#user_tweets').length ) {
         $('body').append($("<div />").attr('id', 'user_tweets'))
     }
@@ -65,9 +64,8 @@ var updateTweetsView = function( options ) {
 
 var addTweet = function(options) {
     var tweet = options['tweet']
-  console.log(tweet)  
+
     var output = "<div id='" + tweet.id + "' class='tweet clearfix' data-current-user-name='" + tweet.from_user +"'>"
- 
     output +=  "<img src='" + tweet.profile_image_url + "' alt='profile picture: " + tweet.profile_image_url + "' />"
     output += "<p class='text'>"
     output += tweet.text
